@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="edit"
+        android:title="Profile"
+        android:summary="Edit your profile"
+        android:persistent="false">
+
+    </Preference>
+    <Preference
+        android:key="profilepic"
+        android:title="Profile pic"
+        android:summary="Edit your profile picture"
+        android:persistent="false">
+<intent android:action="android.intent.action.VIEW"
+        android:targetPackage="com.smartlockinc.smartlocks"
+        android:targetClass="com.smartlockinc.smartlocks.ImageChange"/>
+    </Preference>
+<PreferenceCategory
+    android:key="preuser"
+    android:title="Options"
+    >
+    <Preference
+        android:key="signout"
+        android:title="Signout"
+        android:summary="Signout from the smartapp"
+        android:persistent="false">
+        
+    </Preference></PreferenceCategory>
+    <PreferenceCategory
+        android:key="app"
+        android:title="About us"
+        >
+        <Preference
+            android:key="version"
+            android:title="Version"
+            android:summary="V 1.0.0"
+            android:persistent="false"
+            android:selectable="false">
+
+        </Preference></PreferenceCategory>
+    <PreferenceCategory
+        android:key="policy"
+        android:title="Security "
+        >
+        <Preference
+            android:key="privacy"
+            android:title="Privacy Policy"
+            android:summary="Here are the policies of this app."
+            android:persistent="false">
+        </Preference></PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".SharedKeyFragment"
+    android:id="@+id/relativelayout"
+    >
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/fab">
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="16dp"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end"
+        app:rippleColor="#FFFF000C"
+        android:layout_gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:autoText="true"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="#1a237e"
+        android:src="@drawable/plus"
+        android:visibility="visible"
+        app:elevation="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rv"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/listView"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true">
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv1"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:alpha="1"
+            android:visibility="visible"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="182dp"
+            android:elevation="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Neighbour"
+            android:id="@+id/textView"
+            android:layout_alignBottom="@+id/rv"
+            android:layout_centerHorizontal="true"
+            android:textColor="#010101"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvmem"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:alpha="1"
+            android:visibility="visible"
+            android:background="#ffffff"
+            android:layout_alignTop="@+id/cv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:elevation="10dp"
+            android:elegantTextHeight="true"
+            android:allowUndo="false">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Family Member"
+                android:id="@+id/textView2"
+                android:layout_alignBottom="@+id/rv"
+                android:layout_centerHorizontal="true"
+                android:textColor="#010101"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabmember"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom|right|end"
+            app:rippleColor="#FFFF000C"
+            android:layout_gravity="right"
+            android:autoText="true"
+            app:backgroundTint="#ff000c"
+            android:src="@drawable/ic_face_white_24dp"
+            android:layout_alignTop="@+id/cvmem"
+            android:layout_alignParentEnd="true"
+            android:alpha="1"
+            app:elevation="15dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabneighbour"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom|right|end"
+            app:rippleColor="#FFFF000C"
+            android:layout_gravity="right"
+            android:autoText="true"
+            app:backgroundTint="#044bfd"
+            android:src="@drawable/ic_face_white_24dp"
+            android:layout_alignTop="@+id/cv1"
+            android:layout_alignStart="@+id/fabmember"
+            android:alpha="1"
+            app:elevation="15dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rv2"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/listView"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true">
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvaddneighbour"
+            android:layout_width="110dp"
+            android:layout_height="240dp"
+            android:visibility="invisible"
+            android:elevation="20dp"
+            card_view:cardBackgroundColor="#FFF4F4F4"
+            card_view:cardElevation="20dp"
+            android:alpha="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et1"
+                android:layout_marginTop="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat"
+                >
+
+                <EditText
+
+                    android:id="@+id/Neighbourname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:divider="@color/myDrawerBackground"
+                    android:paddingStart="5dp"
+
+                    android:inputType="text"
+                    android:textColor="#1a237e"
+                    android:textColorHint="#1a237e" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et2"
+                android:layout_marginTop="110dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat"
+                >
+
+                <EditText
+
+                    android:id="@+id/Neighbourphoneno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phoneno"
+                    android:divider="@color/myDrawerBackground"
+                    android:paddingStart="5dp"
+                    android:inputType="phone"
+                    android:textColor="#1a237e"
+                    android:textColorHint="#1a237e" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:id="@+id/editText"
+                android:text="Neighbour Details"
+                android:layout_marginLeft="110dp"
+                android:layout_alignParentTop="true"
+                android:textColor="#1a237e"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
+            <com.rey.material.widget.Button
+                style="Material.Drawable.Ripple.Touch.Light"
+                android:id="@+id/btnRegister"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="ADD"
+                android:textStyle="normal"
+                android:background="#1a237e"
+                android:textColor="#f9ffeb"
+                android:textSize="20sp"
+                app:rd_rippleAnimDuration="450"
+                android:clickable="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginRight="15dp"
+
+                app:rd_enable="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/editText"
+                android:layout_marginTop="170dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvaddmember"
+            android:layout_width="110dp"
+            android:layout_height="240dp"
+            android:visibility="invisible"
+            android:elevation="20dp"
+            card_view:cardBackgroundColor="#FFF4F4F4"
+            card_view:cardElevation="20dp"
+            android:alpha="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/memberdetails"
+                android:layout_marginTop="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat"
+                >
+
+            <EditText
+
+                android:id="@+id/MemberName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Member Name"
+                android:divider="@color/myDrawerBackground"
+                android:paddingStart="5dp"
+
+                android:inputType="text"
+                android:textColor="#1a237e"
+                android:textColorHint="#1a237e" />
+        </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RASPKEY"
+                android:layout_marginTop="110dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat"
+                >
+
+                <EditText
+
+                    android:id="@+id/Raspkey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Raspkey"
+                    android:divider="@color/myDrawerBackground"
+                    android:paddingStart="5dp"
+                    android:inputType="text"
+                    android:textColor="#1a237e"
+                    android:textColorHint="#1a237e" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:id="@+id/edittext"
+                android:text="Member Details"
+                android:layout_marginLeft="110dp"
+                android:layout_alignParentTop="true"
+                android:textColor="#1a237e"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
+            <com.rey.material.widget.Button
+                style="Material.Drawable.Ripple.Touch.Light"
+                android:id="@+id/btnaddmember"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="ADD"
+                android:textStyle="normal"
+                android:background="#1a237e"
+                android:textColor="#f9ffeb"
+                android:textSize="20sp"
+                app:rd_rippleAnimDuration="450"
+                android:clickable="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginRight="15dp"
+
+                app:rd_enable="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/editText"
+                android:layout_marginTop="170dp" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/signup"
+    android:theme="@style/AppTheme2"
+    android:background="@color/myPrimaryColor"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et1"
+        android:layout_marginTop="100dp"
+        android:focusable="true"
+        android:inputType="textEmailAddress"
+        android:focusableInTouchMode="true"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat"
+        >
+
+    <EditText
+
+        android:id="@+id/Email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:divider="@color/myDrawerBackground"
+        android:paddingStart="5dp"
+
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et2"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/et1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:hintTextAppearance="@style/TextAppearance.AppCompat"
+
+        >
+
+
+
+    <EditText
+
+        android:id="@+id/Password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:autoText="false"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        />
+       </android.support.design.widget.TextInputLayout>
+
+
+    <com.rey.material.widget.Button
+        style="Material.Drawable.Ripple.Touch.Light"
+        android:id="@+id/btnRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/register"
+        android:layout_marginTop="20dp"
+        android:textStyle="normal"
+        android:background="@drawable/mybuttonbg"
+        android:textColor="@color/myPrimaryColor"
+        android:layout_below="@id/et2"
+        android:textSize="20sp"
+        app:rd_rippleAnimDuration="450"
+        android:clickable="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+
+        app:rd_enable="true"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/btn_sign_in" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="145dp" />
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fbbutton"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/btn_sign_in"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/btn_sign_in"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+</RelativeLayout>

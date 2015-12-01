@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvmem"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:visibility="visible"
+        android:background="#ffffff"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp"
+        android:elegantTextHeight="true"
+        android:allowUndo="false"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/User"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@+id/cvmem"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/textViewup"
+            android:layout_marginLeft="65dp"
+            android:layout_alignBottom="@+id/cvmem"
+            android:layout_centerHorizontal="true"
+            android:textColor="#534b4f"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/Name"
+            android:layout_marginLeft="190dp"
+            android:layout_alignBottom="@+id/cvmem"
+            android:layout_centerHorizontal="true"
+            android:textColor="#1a237e"
+            android:textStyle="italic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="65dp"
+            android:id="@+id/textdown"
+            android:layout_marginTop="25dp"
+            android:layout_alignBottom="@+id/cvmem"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold|italic"
+            android:textColor="#534b4f" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:layout_marginLeft="190dp"
+            android:id="@+id/Key"
+            android:layout_marginTop="25dp"
+            android:layout_alignBottom="@+id/cvmem"
+            android:layout_alignParentEnd="true"
+            android:textColor="#1a237e"
+            android:textStyle="italic" />
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
